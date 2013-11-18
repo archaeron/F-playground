@@ -1,0 +1,5 @@
+/Users/nicolasgagliani/Projects/Api/Api/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.fs
+/Users/nicolasgagliani/Projects/Api/Api/bin/Debug/Api.exe.mdb
+/Users/nicolasgagliani/Projects/Api/Api/bin/Debug/Api.exe
+/Users/nicolasgagliani/Projects/Api/Api/obj/x86/Debug/Api.exe
+/Users/nicolasgagliani/Projects/Api/Api/obj/x86/Debug/Api.exe.mdb
