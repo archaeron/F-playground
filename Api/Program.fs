@@ -21,23 +21,25 @@ let readLines (filePath:string) = seq {
 let printLine (line: Line) =
     match line with
     | EmptyLine -> ()
-    | DataLine(blockNumber, data) -> Console.WriteLine(blockNumber.ToString() + ": " + data.ToString())
+    | DataLine(blockNumber, data)
+        ->
+            Console.WriteLine("")
+            Console.WriteLine("Block: "+blockNumber.ToString())
 
 let parseLines (lines: seq<String>) =
-    lines   |> Seq.map parseLine
+     lines   |> Seq.map parseLine
             |> Seq.filter filter
             |> Seq.map decode
             |> Seq.iter printLine
 
 
 [<EntryPoint>]
-let main args = 
+let main args =
     Console.WriteLine (Directory.GetCurrentDirectory())
 
     let lines = readLines "../../Data/data"
 
     let parsedLines = parseLines lines
 
-    Console.WriteLine("Hello world!")
+    Console.WriteLine("Done.")
     0
-

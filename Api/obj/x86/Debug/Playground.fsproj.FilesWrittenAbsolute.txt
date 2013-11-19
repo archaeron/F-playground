@@ -3,3 +3,8 @@
 /Users/nicolasgagliani/Projects/Api/Api/bin/Debug/Api.exe
 /Users/nicolasgagliani/Projects/Api/Api/obj/x86/Debug/Api.exe
 /Users/nicolasgagliani/Projects/Api/Api/obj/x86/Debug/Api.exe.mdb
+/home/jorismorger/Projects/F-playground/Api/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.fs
+/home/jorismorger/Projects/F-playground/Api/bin/Debug/Api.exe.mdb
+/home/jorismorger/Projects/F-playground/Api/bin/Debug/Api.exe
+/home/jorismorger/Projects/F-playground/Api/obj/x86/Debug/Api.exe
+/home/jorismorger/Projects/F-playground/Api/obj/x86/Debug/Api.exe.mdb
