@@ -7,13 +7,8 @@ module Api.Main
 
 open System
 open System.IO
+open Api.Parser
 
-type BlockNumber = String
-type Data = String
-
-type Line =
-    |   DataLine of BlockNumber * Data
-    |   EmptyLine
 
 let readLines (filePath:string) = seq {
     use sr = new StreamReader (filePath)
@@ -24,15 +19,7 @@ let readLines (filePath:string) = seq {
 let printLine (line: Line) =
     match line with
     | EmptyLine -> ()
-    | DataLine(blockNumber, _) -> Console.WriteLine("Data: " + blockNumber)
-
-let parseLine (line: String) =
-    match line with
-    | "*"   -> EmptyLine
-    | _     ->
-        let words = line.Split [|' '|]
-        let block: BlockNumber = words.[0]
-        DataLine(block, "")
+    | DataLine(blockNumber, data) -> Console.WriteLine(blockNumber.ToString() + ": " + data.ToString())
 
 let parseLines (lines: seq<String>) =
     lines |> Seq.map parseLine
