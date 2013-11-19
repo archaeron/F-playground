@@ -8,6 +8,7 @@ module Api.Main
 open System
 open System.IO
 open Api.Parser
+open Api.Decoder
 
 
 let readLines (filePath:string) = seq {
@@ -22,8 +23,9 @@ let printLine (line: Line) =
     | DataLine(blockNumber, data) -> Console.WriteLine(blockNumber.ToString() + ": " + data.ToString())
 
 let parseLines (lines: seq<String>) =
-    lines |> Seq.map parseLine
-         |> Seq.iter printLine
+    lines   |> Seq.map parseLine
+            |> Seq.map decode
+            |> Seq.iter printLine
 
 
 [<EntryPoint>]
