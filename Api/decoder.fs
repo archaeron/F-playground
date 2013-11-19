@@ -1,7 +1,7 @@
 
-module Api.Decoder
+module PlayGround.Decoder
 
-open Api.Parser
+open PlayGround.Parser
 
 
 let decode line =

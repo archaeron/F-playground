@@ -1,5 +1,5 @@
 
-module Api.Parser
+module PlayGround.Parser
 
 open System
 
@@ -7,8 +7,8 @@ type BlockNumber = int
 type Data = List<String>
 
 type Line =
-    |   DataLine of BlockNumber * Data
-    |   EmptyLine
+    | DataLine of BlockNumber * Data
+    | EmptyLine
 
 let parseHexString (s: String): BlockNumber =
     Convert.ToInt32(s, 16)

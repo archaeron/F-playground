@@ -3,12 +3,13 @@
 // Pad, right-click on the project node, choose 'Options --> Build --> General' and change the target
 // framework to .NET 4.0 or .NET 4.5.
 
-module Api.Main
+module PlayGround.Main
 
 open System
 open System.IO
-open Api.Parser
-open Api.Decoder
+open PlayGround.Parser
+open PlayGround.Filter
+open PlayGround.Decoder
 
 
 let readLines (filePath:string) = seq {
@@ -24,6 +25,7 @@ let printLine (line: Line) =
 
 let parseLines (lines: seq<String>) =
     lines   |> Seq.map parseLine
+            |> Seq.filter filter
             |> Seq.map decode
             |> Seq.iter printLine
 
